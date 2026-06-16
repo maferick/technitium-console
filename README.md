@@ -108,7 +108,8 @@ MIT, same as the rest of the project. Found a security problem? See [SECURITY.md
 ## Acknowledgements
 
 All the hard parts (DNS, DHCP, DNSSEC, the API) are [Technitium DNS Server](https://github.com/TechnitiumSoftware/DnsServer)
-by Shreyas Zare. This project is just a different coat of paint on top.
+by Shreyas Zare. This project is just a different coat of paint on top, so consider it a long-form
+feature request with the implementation already attached.
 
 ## License
 
