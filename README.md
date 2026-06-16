@@ -22,6 +22,10 @@ like** (MIT). No warranty, no strings.
 It is a drop-in *alternative* console: it talks to your existing, unmodified Technitium server. The
 original UI keeps working alongside it.
 
+Full disclosure: I'm not really a developer. I built this with a lot of help from Claude (Anthropic's
+AI), and honestly had a blast doing it. So if the code makes a seasoned dev wince here and there, that
+is why, and PRs are very welcome. :D
+
 ## Screenshot
 
 ![Dashboard](docs/dashboard.png)
