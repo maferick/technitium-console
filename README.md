@@ -104,6 +104,14 @@ Vite proxies `/api` to `TECHNITIUM_DEV_PROXY` (default `http://localhost:5380`).
 Built against the Technitium DNS Server v13+ REST API. Technitium evolves its API between releases;
 if something looks off after a server upgrade, please open an issue with your server version.
 
+## Known limitations
+
+- **Block-list URL domains aren't browsable per-domain.** The Allow/Block screen lists and manages
+  the domains you add or remove yourself. Domains pulled in from block-list URLs (there can be
+  hundreds of thousands) live in a separate zone that the Technitium API doesn't enumerate
+  individually, so they don't show up in that list. Blocking still applies to all of them; the
+  dashboard shows the totals, and you manage those lists via the block-list URLs under Settings.
+
 ## Contributing
 
 Issues and PRs are welcome, see [CONTRIBUTING.md](CONTRIBUTING.md). There is no CLA; contributions are
