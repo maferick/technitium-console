@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Technitium DNS Server (the backend)
+    url: https://github.com/TechnitiumSoftware/DnsServer
+    about: Bugs in DNS resolution, the API itself, or the server belong upstream, not here.
+  - name: Question / discussion
+    url: https://github.com/maferick/technitium-console/discussions
+    about: For usage questions and ideas, open a Discussion instead of an issue.

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-bg text-txt font-sans antialiased;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,.02) 1px, transparent 0),
+      radial-gradient(1100px 520px at 86% -12%, rgba(163,230,53,.10), transparent 60%),
+      radial-gradient(820px 480px at 4% -6%, rgba(232,121,249,.06), transparent 55%);
+    background-size: 22px 22px, 100% 100%, 100% 100%;
+    background-attachment: fixed;
+    letter-spacing: -0.005em;
+  }
+  ::selection { background: rgba(163,230,53,.30); color: #0e0f13; }
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-thumb { background: #333a47; border-radius: 8px; border: 3px solid #0e0f13; }
+  ::-webkit-scrollbar-thumb:hover { background: #45506a; }
+}
+
+@layer components {
+  .card { @apply bg-surface border border-line rounded-2xl shadow-card; }
+  .input {
+    @apply bg-surface border border-line2 rounded-lg px-3 py-2 text-sm font-mono text-txt
+           placeholder:text-mut outline-none transition focus:border-accent
+           focus:ring-2 focus:ring-accent/20;
+  }
+  .btn { @apply inline-flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm font-semibold transition active:translate-y-px; }
+  .btn-primary { @apply btn text-[#10210a] font-bold shadow-glow;
+    background-image: linear-gradient(180deg,#a3e635,#84cc16); }
+  .btn-ghost { @apply btn bg-surface2 border border-line2 text-txt hover:bg-surface3 hover:text-white; }
+  .chip { @apply inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-semibold font-mono; }
+}

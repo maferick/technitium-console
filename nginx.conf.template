@@ -1,0 +1,26 @@
+# Serves the SPA and reverse-proxies /api to your Technitium DNS Server,
+# so the browser talks to the same origin (no CORS, token stays first-party).
+# ${TECHNITIUM_UPSTREAM} is substituted at container start (default technitium:5380).
+server {
+    listen 80;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    location /api/ {
+        proxy_pass http://${TECHNITIUM_UPSTREAM};
+        proxy_set_header Host $host;
+        proxy_http_version 1.1;
+        proxy_read_timeout 60s;
+        proxy_connect_timeout 5s;
+    }
+
+    location /assets/ {
+        expires 7d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    location / {
+        try_files $uri /index.html;
+    }
+}

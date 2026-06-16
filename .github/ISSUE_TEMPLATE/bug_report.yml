@@ -1,0 +1,57 @@
+name: Bug report
+description: Something in the UI is broken or behaves unexpectedly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. The more detail you give, the faster it can be fixed.
+        This is a third-party UI, so please include details that help reproduce the problem.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug, and what you expected instead.
+      placeholder: When I open the DNSSEC dialog and click Rollover, nothing happens and ...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to Zones > example.com
+        2. Click DNSSEC
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: tech-version
+    attributes:
+      label: Technitium DNS Server version
+      placeholder: "13.x"
+    validations:
+      required: true
+  - type: input
+    id: console-version
+    attributes:
+      label: technitium-console version / image tag
+      placeholder: "v1.0.0 or latest"
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options: [Chrome, Firefox, Safari, Edge, Other]
+  - type: textarea
+    id: errors
+    attributes:
+      label: Console / network errors
+      description: |
+        Open your browser DevTools (F12). Copy any red errors from the Console tab, and for failed
+        actions, the request URL + response from the Network tab (the /api/... call). Redact tokens.
+      render: text
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, deployment notes (reverse proxy, TECHNITIUM_UPSTREAM), etc.

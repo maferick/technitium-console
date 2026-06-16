@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest an improvement or a missing Technitium capability
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is missing or could be better?
+      description: Describe the use case. If it maps to a Technitium API call, mention it.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: How might it work?
+      description: Optional. Rough UI/UX idea, or a link to the relevant Technitium API docs.

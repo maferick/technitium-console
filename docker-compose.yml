@@ -1,0 +1,13 @@
+# Example deployment. Point TECHNITIUM_UPSTREAM at your Technitium DNS Server's
+# web service (host:port), then browse to http://localhost:8080
+services:
+  technitium-console:
+    image: ghcr.io/maferick/technitium-console:latest
+    # or build locally:
+    # build: .
+    container_name: technitium-console
+    restart: unless-stopped
+    environment:
+      TECHNITIUM_UPSTREAM: "192.168.1.5:5380"
+    ports:
+      - "8080:80"
